@@ -9,10 +9,10 @@ import edu.wpi.first.wpilibj.Jaguar;
 
 public class SpinArm extends CommandBase 
 {
-    
     private Jaguar j;
     
-    public SpinArm() {
+    public SpinArm() 
+    {
         j = new Jaguar(OI.ARM_JAG_PORT);
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);

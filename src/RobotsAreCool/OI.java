@@ -11,7 +11,10 @@ import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
  */
 public class OI 
 {
-    //Trigger for solenoid, raise/lower plunger, activate/deactivate plunger, activate/deactivate frisbee search
+    /*Trigger for solenoid, 
+    raise/lower plunger, 
+    activate/deactivate plunger, 
+    activate/deactivate frisbee search*/
    
     public static int SOLENOID_PORT = 0,
             PLUNGER_JAG_PORT = 0,
@@ -22,7 +25,8 @@ public class OI
     
     public static SmartDashboard smartdash = new SmartDashboard();
     
-    Joystick lJoystick = new Joystick(1), rJoystick = new Joystick(2);
+    Joystick lJoystick = new Joystick(1), 
+            rJoystick = new Joystick(2);
     
     public JoystickButton suctionPlungerOn = new JoystickButton(rJoystick, 2),
             suctionPlungerOff = new JoystickButton(rJoystick, 4),

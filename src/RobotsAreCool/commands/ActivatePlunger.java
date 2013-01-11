@@ -1,9 +1,5 @@
 package RobotsAreCool.commands;
 
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 import RobotsAreCool.OI;
 import edu.wpi.first.wpilibj.Solenoid;
 /**
