@@ -1,6 +1,11 @@
 *.class
+*.xml
 
 # Package Files #
 *.jar
 *.war
 *.ear
+
+# Netbeans Stuff #
+*.properties
+*.MF
