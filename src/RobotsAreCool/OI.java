@@ -1,14 +1,36 @@
+package RobotsAreCool;
 
-package templates;
 
-import edu.wpi.first.wpilibj.buttons.Button;
-import edu.wpi.first.wpilibj.buttons.DigitalIOButton;
+import edu.wpi.first.wpilibj.Joystick;
+import edu.wpi.first.wpilibj.buttons.JoystickButton;
+import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
 /**
  * This class is the glue that binds the controls on the physical operator
  * interface to the commands and command groups that allow control of the robot.
  */
-public class OI {
+public class OI 
+{
+    //Trigger for solenoid, raise/lower plunger, activate/deactivate plunger, activate/deactivate frisbee search
+   
+    public static int SOLENOID_PORT = 0,
+            PLUNGER_JAG_PORT = 0,
+            DRIVE_LEFT_JAG_PORT = 0,
+            DRIVE_RIGHT_JAG_PORT = 0,
+            BICYCLE_JAG_PORT = 0,
+            ARM_JAG_PORT = 0;
+    
+    public static SmartDashboard smartdash = new SmartDashboard();
+    
+    Joystick lJoystick = new Joystick(1), rJoystick = new Joystick(2);
+    
+    public JoystickButton suctionPlungerOn = new JoystickButton(rJoystick, 2),
+            suctionPlungerOff = new JoystickButton(rJoystick, 4),
+            lowerPlunger = new JoystickButton(rJoystick, 3), 
+            raisePlunger = new JoystickButton(rJoystick, 5),
+            fireFrisbee = new JoystickButton(rJoystick, 1), 
+            autoAim = new JoystickButton(lJoystick, 1);
+    
     //// CREATING BUTTONS
     // One type of button is a joystick button which is any button on a joystick.
     // You create one by telling it which joystick it's on and which button

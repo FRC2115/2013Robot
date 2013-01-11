@@ -1,3 +1,5 @@
+package RobotsAreCool;
+
 /*----------------------------------------------------------------------------*/
 /* Copyright (c) FIRST 2008. All Rights Reserved.                             */
 /* Open Source Software - may be modified and shared by FRC teams. The code   */
@@ -5,15 +7,12 @@
 /* the project.                                                               */
 /*----------------------------------------------------------------------------*/
 
-package templates;
-
-
+import RobotsAreCool.commands.CommandBase;
+import RobotsAreCool.commands.ExampleCommand;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
-import commands.CommandBase;
-import commands.ExampleCommand;
 
 /**
  * The VM is configured to automatically run this class, and to call the

@@ -1,9 +1,9 @@
-package commands;
+package RobotsAreCool.commands;
 
+import RobotsAreCool.OI;
+import RobotsAreCool.subsystems.ExampleSubsystem;
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import templates.OI;
-import subsystems.ExampleSubsystem;
 
 /**
  * The base for all commands. All atomic commands should subclass CommandBase.

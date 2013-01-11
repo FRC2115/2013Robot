@@ -1,13 +1,23 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package RobotsAreCool.commands;
 
-package commands;
+import RobotsAreCool.OI;
+import edu.wpi.first.wpilibj.Solenoid;
+
 
 /**
  *
- * @author bradmiller
+ * @author Tripp
  */
-public class ExampleCommand extends CommandBase {
-
-    public ExampleCommand() {
+public class PlungerDeactivate extends CommandBase {
+    
+    private Solenoid s;
+    
+    public PlungerDeactivate() {
+        s = new Solenoid(OI.SOLENOID_PORT);
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
     }
@@ -18,6 +28,7 @@ public class ExampleCommand extends CommandBase {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
+        s.set(true);
     }
 
     // Make this return true when this Command no longer needs to run execute()
