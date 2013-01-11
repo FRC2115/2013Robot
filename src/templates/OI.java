@@ -1,5 +1,5 @@
 
-package FRC2115.templates;
+package templates;
 
 import edu.wpi.first.wpilibj.buttons.Button;
 import edu.wpi.first.wpilibj.buttons.DigitalIOButton;

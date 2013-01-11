@@ -1,9 +1,9 @@
-package FRC2115.commands;
+package commands;
 
 import edu.wpi.first.wpilibj.command.Command;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import edu.wpi.first.wpilibj.templates.OI;
-import edu.wpi.first.wpilibj.templates.subsystems.ExampleSubsystem;
+import templates.OI;
+import subsystems.ExampleSubsystem;
 
 /**
  * The base for all commands. All atomic commands should subclass CommandBase.
