@@ -4,10 +4,10 @@
  */
 package RobotsAreCool.subsystems;
 
+import RobotsAreCool.Templates.RobotMap;
 import RobotsAreCool.commands.DriveWithJoystick;
 import edu.wpi.first.wpilibj.RobotDrive;
 import edu.wpi.first.wpilibj.command.Subsystem;
-import RobotsAreCool.Templates.RobotMap;
 
 /**
  *
@@ -17,12 +17,11 @@ public class Chassis extends Subsystem
 {
     private final double SPEED_MULTIPLIER = 1;
     
-    public RobotDrive drive;
+    private RobotDrive drive;
    
     public Chassis()
     {
-        drive = new RobotDrive(RobotMap.leftMotor, 
-                RobotMap.rightMotor);
+        drive = new RobotDrive(RobotMap.LEFT_MOTOR_CHANNEL, RobotMap.RIGHT_MOTOR_CHANNEL);
         drive.setSafetyEnabled(false);
     }
     
@@ -31,14 +30,14 @@ public class Chassis extends Subsystem
         drive.tankDrive(speed, speed);
     }
     
-    
-    
     //Rotates the robot in place.
     //speed >= 0; 
     public void driveRotate(double speed, boolean clockWise)
     {
-        if(clockWise)
+        if(clockWise) 
+        {
             speed *= -1;
+        }
         
         drive.tankDrive(speed, -speed);
     }

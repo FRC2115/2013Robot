@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package RobotsAreCool.commands;
 
 /**
@@ -20,7 +16,7 @@ public class RaisePlunger extends CommandBase {
     // Called just before this Command runs the first time
     protected void initialize() 
     {
-        arm.s.set(true);
+        arm.setSolenoid(false);
     }
 
     // Called repeatedly when this Command is scheduled to run
@@ -43,6 +39,8 @@ public class RaisePlunger extends CommandBase {
 
     // Called when another command which requires one or more of the same
     // subsystems is scheduled to run
-    protected void interrupted() {
+    protected void interrupted() 
+    {
+        
     }
 }

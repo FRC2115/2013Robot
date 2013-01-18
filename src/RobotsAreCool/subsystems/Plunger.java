@@ -14,11 +14,11 @@ import edu.wpi.first.wpilibj.command.Subsystem;
  */
 public class Plunger extends Subsystem 
 {
-    public Solenoid s;
+    private Solenoid s;
     
     public Plunger()
     {
-        s = new Solenoid(RobotMap.plungerSolenoid);
+        s = new Solenoid(RobotMap.PLUNGER_SOLENOID_CHANNEL);
     }
     
     // Put methods for controlling this subsystem

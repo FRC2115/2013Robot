@@ -15,8 +15,8 @@ import edu.wpi.first.wpilibj.command.Command;
  * subsystem elsewhere in your code in your code use CommandBase.exampleSubsystem
  * @author Author
  */
-public abstract class CommandBase extends Command {
-
+public abstract class CommandBase extends Command 
+{
     public static OI oi;
     public static Arm arm;
     public static Chassis chassis;
@@ -44,11 +44,13 @@ public abstract class CommandBase extends Command {
         //SmartDashboard.putData(exampleSubsystem);
     }
 
-    public CommandBase(String name) {
+    public CommandBase(String name) 
+    {
         super(name);
     }
 
-    public CommandBase() {
+    public CommandBase() 
+    {
         super();
     }
 }

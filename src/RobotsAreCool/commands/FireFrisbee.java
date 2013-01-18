@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package RobotsAreCool.commands;
 
 /**
@@ -10,7 +6,6 @@ package RobotsAreCool.commands;
  */
 public class FireFrisbee extends CommandBase 
 {
-    
     public FireFrisbee() 
     {
         requires(shooter);
@@ -27,13 +22,13 @@ public class FireFrisbee extends CommandBase
     // Called repeatedly when this Command is scheduled to run
     protected void execute() 
     {
-        clip.s.set(true);
+        clip.set(true);
     }
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() 
     {
-        clip.s.set(false);
+        clip.set(false);
         return false;
     }
 

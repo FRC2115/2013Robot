@@ -8,19 +8,24 @@ package RobotsAreCool.Templates;
  */
 public class RobotMap {
     
-    public static final int leftMotor = 1,
-            rightMotor = 2,
-            launcherMotor = 3,
-            armMotor = 4,
-            plungerMotor = 5,
+    public static final int 
+            //Motor Channels
+            LEFT_MOTOR_CHANNEL = 1,
+            RIGHT_MOTOR_CHANNEL = 2,
+            LAUNCHER_MOTOR_CHANNEL = 3,
+            ARM_MOTOR_CHANNEL = 4,
+            PLUNGER_MOTOR_CHANNEL = 5,
             
-            plungerSolenoid = 1,
-            armSolenoid = 2,
-            clipSolenoid = 3,
+            //Solenoid Channels
+            PLUNGER_SOLENOID_CHANNEL = 1,
+            ARM_SOLENOID_CHANNEL = 2,
+            CLIP_SOLENOID_CHANNEL = 3,
             
-            compressorRelayChannel = 1,
+            //Relay Channels
+            COMPRESSOR_RELAY_CHANNEL = 1,
             
-            pressureSwitchChannel = 1;
+            //Switch Channels
+            PRESSURE_SWITCH_CHANNEL = 1;
             
     // For example to map the left and right motors, you could define the
     // following variables to use with your drivetrain subsystem.

@@ -12,7 +12,6 @@ import edu.wpi.first.wpilibj.Solenoid;
  */
 public class ActivatePlunger extends CommandBase 
 {
-    
     private Solenoid s;
     
     public ActivatePlunger() 

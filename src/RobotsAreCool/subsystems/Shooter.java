@@ -1,49 +1,52 @@
 package RobotsAreCool.subsystems;
 
+import RobotsAreCool.Templates.RobotMap;
 import edu.wpi.first.wpilibj.AnalogChannel;
 import edu.wpi.first.wpilibj.Jaguar;
 import edu.wpi.first.wpilibj.command.Subsystem;
-import RobotsAreCool.Templates.RobotMap;
 
 public class Shooter extends Subsystem {
     
-    public Jaguar j;
-    private AnalogChannel us = new AnalogChannel(1,1);
+    private Jaguar j;
+    private AnalogChannel us;
     
     public Shooter()
     {
-        j = new Jaguar(RobotMap.launcherMotor);   
+        us = new AnalogChannel(1,1);
+        j = new Jaguar(RobotMap.LAUNCHER_MOTOR_CHANNEL);   
     }
     
     public void useRange()
     {
-        int range = range();
-        j.set(adjust(range));
+        j.set(adjust(range()));
     }
     
     private int range()
     {
-        int usRange = us.getValue()/2;
+        int usRange = us.getValue() / 2;
         System.out.println("Range: " + usRange);
         return usRange;
     }
     
-    private double adjust(int r)
+    private double adjust(double r)
     {
-        double range = (double)r;
+        if(r < 160) 
+        {
+            r = (r * r* .00002) + .001 * r + .298;
+        }
+        else 
+        {
+            r = 1;
+        }
         
-        if(range < 160)//change later
-            range = (range*range*.00002) + .001 * range + .298;
-        else
-            range =1;
-        
-        return range;
+        return r;
     }
     
     // Put methods for controlling this subsystem
     // here. Call these from Commands.
 
-    public void initDefaultCommand() {
+    public void initDefaultCommand() 
+    {
         // Set the default command for a subsystem here.
         //setDefaultCommand(new MySpecialCommand());
     }
