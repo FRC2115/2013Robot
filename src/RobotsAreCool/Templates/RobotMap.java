@@ -1,4 +1,4 @@
-package RobotsAreCool;
+package RobotsAreCool.Templates;
 
 /**
  * The RobotMap is a mapping from the ports sensors and actuators are wired into
@@ -6,8 +6,22 @@ package RobotsAreCool;
  * the wiring easier and significantly reduces the number of magic numbers
  * floating around.
  */
-public class RobotMap 
-{
+public class RobotMap {
+    
+    public static final int leftMotor = 1,
+            rightMotor = 2,
+            launcherMotor = 3,
+            armMotor = 4,
+            plungerMotor = 5,
+            
+            plungerSolenoid = 1,
+            armSolenoid = 2,
+            clipSolenoid = 3,
+            
+            compressorRelayChannel = 1,
+            
+            pressureSwitchChannel = 1;
+            
     // For example to map the left and right motors, you could define the
     // following variables to use with your drivetrain subsystem.
     // public static final int leftMotor = 1;

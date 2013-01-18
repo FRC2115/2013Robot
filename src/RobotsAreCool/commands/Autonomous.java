@@ -8,20 +8,15 @@ package RobotsAreCool.commands;
  *
  * @author Tripp
  */
-public class LowerPlunger extends CommandBase 
-{
+public class Autonomous extends CommandBase {
     
-    public LowerPlunger() 
-    {
-        requires(arm);
+    public Autonomous() {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
     }
 
     // Called just before this Command runs the first time
-    protected void initialize() 
-    {
-        arm.s.set(false);
+    protected void initialize() {
     }
 
     // Called repeatedly when this Command is scheduled to run

@@ -4,28 +4,31 @@
  */
 package RobotsAreCool.commands;
 
+import edu.wpi.first.wpilibj.Solenoid;
+import RobotsAreCool.Templates.OI;
+
 /**
  *
  * @author Tripp
  */
-public class LowerPlunger extends CommandBase 
-{
+public class DeactivatePlunger extends CommandBase {
     
-    public LowerPlunger() 
+    private Solenoid s;
+    
+    public DeactivatePlunger() 
     {
-        requires(arm);
+        requires(plunger);
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
     }
 
     // Called just before this Command runs the first time
-    protected void initialize() 
-    {
-        arm.s.set(false);
+    protected void initialize() {
     }
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
+        s.set(false);
     }
 
     // Make this return true when this Command no longer needs to run execute()

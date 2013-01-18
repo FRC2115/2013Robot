@@ -4,24 +4,19 @@
  */
 package RobotsAreCool.commands;
 
-import RobotsAreCool.OI;
-import edu.wpi.first.wpilibj.Solenoid;
-
-
 /**
  *
  * @author Tripp
  */
-public class PlungerDeactivate extends CommandBase 
+public class AutoAim extends CommandBase 
 {
     
-    private Solenoid s;
-    
-    public PlungerDeactivate() 
+    public AutoAim() 
     {
-        s = new Solenoid(OI.SOLENOID_PORT);
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
+        requires(camera);
+        requires(chassis);
     }
 
     // Called just before this Command runs the first time
@@ -33,7 +28,7 @@ public class PlungerDeactivate extends CommandBase
     // Called repeatedly when this Command is scheduled to run
     protected void execute() 
     {
-        s.set(true);
+        
     }
 
     // Make this return true when this Command no longer needs to run execute()
@@ -45,12 +40,14 @@ public class PlungerDeactivate extends CommandBase
     // Called once after isFinished returns true
     protected void end() 
     {
+    
     }
 
     // Called when another command which requires one or more of the same
     // subsystems is scheduled to run
     protected void interrupted() 
     {
-        
+    
     }
+
 }

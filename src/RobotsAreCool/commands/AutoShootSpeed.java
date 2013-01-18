@@ -8,12 +8,11 @@ package RobotsAreCool.commands;
  *
  * @author Tripp
  */
-public class LowerPlunger extends CommandBase 
-{
+public class AutoShootSpeed extends CommandBase {
     
-    public LowerPlunger() 
+    public AutoShootSpeed() 
     {
-        requires(arm);
+        requires(shooter);
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
     }
@@ -21,11 +20,13 @@ public class LowerPlunger extends CommandBase
     // Called just before this Command runs the first time
     protected void initialize() 
     {
-        arm.s.set(false);
+        
     }
 
     // Called repeatedly when this Command is scheduled to run
-    protected void execute() {
+    protected void execute() 
+    {
+        shooter.useRange();
     }
 
     // Make this return true when this Command no longer needs to run execute()
