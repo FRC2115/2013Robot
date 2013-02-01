@@ -15,14 +15,17 @@ import edu.wpi.first.wpilibj.command.Subsystem;
  */
 public class Chassis extends Subsystem 
 {
-    private final double SPEED_MULTIPLIER = 1;
-    
     private RobotDrive drive;
    
     public Chassis()
     {
         drive = new RobotDrive(RobotMap.LEFT_MOTOR_CHANNEL, RobotMap.RIGHT_MOTOR_CHANNEL);
         drive.setSafetyEnabled(false);
+    }
+    
+    public RobotDrive getDrive()
+    {
+        return drive;
     }
     
     public void driveStraight(double speed)
@@ -44,7 +47,7 @@ public class Chassis extends Subsystem
     
     public void driveWithJoystick(double leftAxis, double rightAxis)
     {
-        drive.tankDrive(leftAxis * SPEED_MULTIPLIER, rightAxis * SPEED_MULTIPLIER);
+        drive.tankDrive(leftAxis, rightAxis);
     }
     
     public void initDefaultCommand() 
