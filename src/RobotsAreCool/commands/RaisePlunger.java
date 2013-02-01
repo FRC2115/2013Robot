@@ -16,7 +16,7 @@ public class RaisePlunger extends CommandBase {
     // Called just before this Command runs the first time
     protected void initialize() 
     {
-        arm.setSolenoid(false);
+        arm.set(1);
     }
 
     // Called repeatedly when this Command is scheduled to run
