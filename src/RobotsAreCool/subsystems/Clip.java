@@ -1,7 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
 package RobotsAreCool.subsystems;
 
 import RobotsAreCool.Templates.RobotMap;
@@ -9,8 +5,10 @@ import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
 /**
- *
+ * An abstraction representing a Clip. A clip holds a certain amount of 
+ * frisbees and can push them into the shooter
  * @author Tripp
+ * @author Jordan Giacone
  */
 public class Clip extends Subsystem 
 {
