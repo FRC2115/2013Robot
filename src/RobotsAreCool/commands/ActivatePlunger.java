@@ -4,16 +4,12 @@
  */
 package RobotsAreCool.commands;
 
-import edu.wpi.first.wpilibj.Solenoid;
-
 /**
  *
  * @author Tripp
  */
 public class ActivatePlunger extends CommandBase 
 {
-    private Solenoid s;
-    
     public ActivatePlunger() 
     {
         requires(plunger);
@@ -30,8 +26,7 @@ public class ActivatePlunger extends CommandBase
     // Called repeatedly when this Command is scheduled to run
     protected void execute() 
     {
-        //plunger.s.set(true);
-        s.set(false);
+        plunger.set(true);
     }
 
     // Make this return true when this Command no longer needs to run execute()
