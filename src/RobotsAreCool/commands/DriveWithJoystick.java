@@ -5,20 +5,23 @@ public class DriveWithJoystick extends CommandBase
     
     public DriveWithJoystick() 
     {
-        // Use requires() here to declare subsystem dependencies
-        // eg. requires(chassis);
+        requires(chassis);
     }
 
     // Called just before this Command runs the first time
     protected void initialize() 
     {
-    
+        //Stopping Motor output to ensure correct input on Joysticks
+        chassis.getDrive().setLeftRightMotorOutputs(0, 0);
     }
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() 
     {
-    
+//        double leftAxis = oi.jLeftWheel.getRawAxis(oi.leftAxis);
+//        double rightAxis = oi.jRightWheel.getRawAxis(oi.rightAxis);
+        
+        //chassis.driveWithJoystick(leftAxis, rightAxis);
     }
 
     // Make this return true when this Command no longer needs to run execute()
