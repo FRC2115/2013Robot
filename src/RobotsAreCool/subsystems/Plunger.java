@@ -9,8 +9,9 @@ import edu.wpi.first.wpilibj.Solenoid;
 import edu.wpi.first.wpilibj.command.Subsystem;
 
 /**
- *
- * @author Tripp
+ * An abstraction to represent the Plunger mechanism on our robot. 
+ * @author Tripp Weiner
+ * @author Jordan Giacone
  */
 public class Plunger extends Subsystem 
 {
@@ -28,5 +29,10 @@ public class Plunger extends Subsystem
     {
         // Set the default command for a subsystem here.
         //setDefaultCommand(new MySpecialCommand());
+    }
+    
+    public void set(boolean on)
+    {
+        s.set(on);
     }
 }
