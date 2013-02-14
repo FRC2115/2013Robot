@@ -19,7 +19,7 @@ public class Chassis extends Subsystem
    
     public Chassis()
     {
-        drive = new RobotDrive(RobotMap.LEFT_MOTOR_CHANNEL, RobotMap.RIGHT_MOTOR_CHANNEL);
+        drive = new RobotDrive(RobotMap.LEFT_FRONT_MOTOR_CHANNEL, RobotMap.LEFT_BACK_MOTOR_CHANNEL, RobotMap.RIGHT_FRONT_MOTOR_CHANNEL, RobotMap.RIGHT_BACK_MOTOR_CHANNEL);
         drive.setSafetyEnabled(false);
     }
     

@@ -10,10 +10,12 @@ public class RobotMap {
     
     public static final int 
             //Motor Channels
-            LEFT_MOTOR_CHANNEL = 1,
-            RIGHT_MOTOR_CHANNEL = 2,
-            LAUNCHER_MOTOR_CHANNEL = 3,
-            ARM_MOTOR_CHANNEL = 4,
+            LEFT_FRONT_MOTOR_CHANNEL = 1,
+            LEFT_BACK_MOTOR_CHANNEL = 2,
+            RIGHT_FRONT_MOTOR_CHANNEL = 3,
+            RIGHT_BACK_MOTOR_CHANNEL = 4,
+            ARM_MOTOR_CHANNEL = 5,
+            LAUNCHER_MOTOR_CHANNEL = 6,
             
             //Solenoid Channels
             PLUNGER_SOLENOID_CHANNEL = 1,

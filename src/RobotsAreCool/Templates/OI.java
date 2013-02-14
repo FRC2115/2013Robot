@@ -17,16 +17,17 @@ import edu.wpi.first.wpilibj.buttons.JoystickButton;
  */
 public class OI 
 {
-    private Joystick lJoystick = new Joystick(1), rJoystick = new Joystick(2);
+    private Joystick lJoystick = new Joystick(1), rJoystick = new Joystick(2), auxJoystick = new Joystick(3);
     private JoystickButton 
-            suctionPlungerOn = new JoystickButton(rJoystick, 2),
-            suctionPlungerOff = new JoystickButton(rJoystick, 4),
-            lowerPlunger = new JoystickButton(rJoystick, 3), 
-            raisePlunger = new JoystickButton(rJoystick, 5),
+            suctionPlungerOn = new JoystickButton(auxJoystick, 2),
+            suctionPlungerOff = new JoystickButton(auxJoystick, 3),
+            lowerPlunger = new JoystickButton(auxJoystick, 4), 
+            raisePlunger = new JoystickButton(auxJoystick, 5),
             fireFrisbee = new JoystickButton(rJoystick, 1), 
             autoAim = new JoystickButton(lJoystick, 3),
             autoShootSpeed = new JoystickButton(lJoystick, 2),
             autoShoot = new JoystickButton(lJoystick, 1);
+            
             
     public OI()
     {
