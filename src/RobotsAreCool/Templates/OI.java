@@ -1,13 +1,6 @@
 package RobotsAreCool.Templates;
 
-import RobotsAreCool.commands.ActivatePlunger;
-import RobotsAreCool.commands.AutoAim;
-import RobotsAreCool.commands.AutoShoot;
-import RobotsAreCool.commands.AutoShootSpeed;
-import RobotsAreCool.commands.DeactivatePlunger;
-import RobotsAreCool.commands.FireFrisbee;
-import RobotsAreCool.commands.LowerPlunger;
-import RobotsAreCool.commands.RaisePlunger;
+import RobotsAreCool.commands.*;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.JoystickButton;
 
@@ -17,29 +10,39 @@ import edu.wpi.first.wpilibj.buttons.JoystickButton;
  */
 public class OI 
 {
-    private Joystick lJoystick = new Joystick(1), rJoystick = new Joystick(2), auxJoystick = new Joystick(3);
+    protected Joystick 
+            lJoy = new Joystick(1),
+            rJoy = new Joystick(2);
+    
     private JoystickButton 
-            suctionPlungerOn = new JoystickButton(auxJoystick, 2),
-            suctionPlungerOff = new JoystickButton(auxJoystick, 3),
-            lowerPlunger = new JoystickButton(auxJoystick, 4), 
-            raisePlunger = new JoystickButton(auxJoystick, 5),
-            fireFrisbee = new JoystickButton(rJoystick, 1), 
-            autoAim = new JoystickButton(lJoystick, 3),
-            autoShootSpeed = new JoystickButton(lJoystick, 2),
-            autoShoot = new JoystickButton(lJoystick, 1);
+            suctionPlunger = new JoystickButton(lJoy, 1),
+            plunger = new JoystickButton(lJoy, 2),
+            fireFrisbee = new JoystickButton(rJoy, 1),
+            spinLeft = new JoystickButton(lJoy, 4),
+            spinRight = new JoystickButton(lJoy, 5);
+            
+            
+//            autoAim = new JoystickButton(lJoystick, 3),
+//            autoShootSpeed = new JoystickButton(lJoystick, 2),
+//            autoShoot = new JoystickButton(lJoystick, 1);
             
             
     public OI()
     {
-        suctionPlungerOn.whileHeld(new ActivatePlunger());   
-        suctionPlungerOff.whileHeld(new DeactivatePlunger());  
-        lowerPlunger.whenPressed(new LowerPlunger());
-        raisePlunger.whenPressed(new RaisePlunger());
-        fireFrisbee.whileHeld(new FireFrisbee());
-        autoAim.whileHeld(new AutoAim());
-        autoShootSpeed.whileHeld(new AutoShootSpeed());
-        autoShoot.whileHeld(new AutoShoot());
+        suctionPlunger.whileHeld(new ActivatePlunger());
+        plunger.whileHeld(new RaisePlunger());
+        fireFrisbee.whenPressed(new FireFrisbee(0.5));
+        spinLeft.whileHeld(new SpinArm(false));
+        spinRight.whileHeld(new SpinArm(true));
     }
+    
+    public void call()
+    {
+        CommandBase.arm.setSpeed((lJoy.getRawAxis(3) + 1) / 4.0);
+        CommandBase.shooter.set((rJoy.getRawAxis(3) + 1) / 2.0);
+        CommandBase.chassis.driveWithJoystick(lJoy.getY(), rJoy.getY());
+    }
+
     
     //// CREATING BUTTONS
     // One type of button is a joystick button which is any button on a joystick.

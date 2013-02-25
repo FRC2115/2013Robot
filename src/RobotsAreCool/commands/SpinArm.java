@@ -4,11 +4,16 @@ package RobotsAreCool.commands;
  *
  * @author Tripp
  */
-public class SpinArm extends CommandBase {
+public class SpinArm extends CommandBase
+{
+    boolean l;
     
-    public SpinArm() 
+    public SpinArm(boolean left) 
     {
         requires(arm);
+        
+        l = left;
+        
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
     }
@@ -16,18 +21,24 @@ public class SpinArm extends CommandBase {
     // Called just before this Command runs the first time
     protected void initialize() 
     {
-        
+   
     }
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() 
     {
-        arm.set(0.5);
+        double speed = arm.getSpeed();
+        if(l)
+            speed *= -1;
+        
+        arm.set(speed);
+        System.out.println(speed);
     }
 
     // Make this return true when this Command no longer needs to run execute()
     protected boolean isFinished() 
     {
+        
         return false;
     }
 
@@ -41,6 +52,6 @@ public class SpinArm extends CommandBase {
     // subsystems is scheduled to run
     protected void interrupted() 
     {
-        
+        arm.stop();
     }
 }

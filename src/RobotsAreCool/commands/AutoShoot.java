@@ -14,7 +14,7 @@ public class AutoShoot extends CommandBase
     public AutoShoot() 
     {
         requires(shooter);
-        requires(camera);
+        //requires(camera);
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
     }

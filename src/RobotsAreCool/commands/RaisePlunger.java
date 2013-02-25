@@ -1,14 +1,19 @@
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package RobotsAreCool.commands;
 
 /**
  *
  * @author Tripp
  */
-public class RaisePlunger extends CommandBase {
+public class RaisePlunger extends CommandBase 
+{
     
     public RaisePlunger() 
     {
-        requires(arm);
+        requires(plunger);
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
     }
@@ -16,17 +21,17 @@ public class RaisePlunger extends CommandBase {
     // Called just before this Command runs the first time
     protected void initialize() 
     {
-        arm.set(1);
-    }
-
-    // Called repeatedly when this Command is scheduled to run
-    protected void execute()
-    {
         
     }
 
+    // Called repeatedly when this Command is scheduled to run
+    protected void execute() 
+    {
+        arm.set(true);
+    }
+
     // Make this return true when this Command no longer needs to run execute()
-    protected boolean isFinished() 
+    protected boolean isFinished()
     {
         return false;
     }
@@ -41,6 +46,6 @@ public class RaisePlunger extends CommandBase {
     // subsystems is scheduled to run
     protected void interrupted() 
     {
-        
+        arm.set(false);
     }
 }

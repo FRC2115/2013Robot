@@ -18,9 +18,9 @@ public class RobotMap {
             LAUNCHER_MOTOR_CHANNEL = 6,
             
             //Solenoid Channels
-            PLUNGER_SOLENOID_CHANNEL = 1,
-            ARM_SOLENOID_CHANNEL = 2,
-            CLIP_SOLENOID_CHANNEL = 3,
+            ARM_SOLENOID_CHANNEL = 1,
+            CLIP_SOLENOID_CHANNEL = 2,
+            PLUNGER_SOLENOID_CHANNEL = 3,
             
             //Relay Channels
             COMPRESSOR_RELAY_CHANNEL = 1,

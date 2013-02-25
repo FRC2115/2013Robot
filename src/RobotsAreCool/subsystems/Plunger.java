@@ -31,8 +31,8 @@ public class Plunger extends Subsystem
         //setDefaultCommand(new MySpecialCommand());
     }
     
-    public void set(boolean on)
+    public void set(boolean b)
     {
-        s.set(on);
+        s.set(b);
     }
 }

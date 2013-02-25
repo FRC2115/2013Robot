@@ -13,7 +13,7 @@ public class Camera extends Subsystem
 
     public void initDefaultCommand() 
     {
-        axis = AxisCamera.getInstance();   
+        axis = AxisCamera.getInstance();
     }
         
     public void screenCap()

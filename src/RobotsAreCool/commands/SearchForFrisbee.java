@@ -8,7 +8,7 @@ public class SearchForFrisbee extends CommandBase {
     
     public SearchForFrisbee() 
     {
-        requires(camera);
+        //requires(camera);
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
     }

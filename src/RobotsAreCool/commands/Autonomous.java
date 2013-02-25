@@ -10,6 +10,7 @@ public class Autonomous extends CommandBase {
     {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
+        System.out.println("Autonomous");
     }
 
     // Called just before this Command runs the first time

@@ -15,7 +15,7 @@ public class AutoAim extends CommandBase
     {
         // Use requires() here to declare subsystem dependencies
         // eg. requires(chassis);
-        requires(camera);
+        //requires(camera);
         requires(shooter);
     }
 

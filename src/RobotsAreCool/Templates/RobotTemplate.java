@@ -1,6 +1,5 @@
 package RobotsAreCool.Templates;
 
-
 import RobotsAreCool.commands.CommandBase;
 import edu.wpi.first.wpilibj.IterativeRobot;
 import edu.wpi.first.wpilibj.command.Command;
@@ -14,6 +13,7 @@ import edu.wpi.first.wpilibj.livewindow.LiveWindow;
  * creating this project, you must also update the manifest file in the resource
  * directory.
  */
+
 public class RobotTemplate extends IterativeRobot {
 
     Command autonomousCommand;
@@ -24,15 +24,13 @@ public class RobotTemplate extends IterativeRobot {
      */
     public void robotInit() 
     {
-        // instantiate the command used for the autonomous period
-        
-        // Initialize all subsystems
         CommandBase.init();
     }
 
     public void autonomousInit() 
     {
         // schedule the autonomous command (example)
+        //Scheduler.getInstance().add(new Autonomous());
         autonomousCommand.start();
     }
 
@@ -46,11 +44,7 @@ public class RobotTemplate extends IterativeRobot {
 
     public void teleopInit() 
     {
-	// This makes sure that the autonomous stops running when
-        // teleop starts running. If you want the autonomous to 
-        // continue until interrupted by another command, remove
-        // this line or comment it out.
-        autonomousCommand.cancel();
+        //autonomousCommand.cancel();    
     }
 
     /**
@@ -59,6 +53,7 @@ public class RobotTemplate extends IterativeRobot {
     public void teleopPeriodic() 
     {
         Scheduler.getInstance().run();
+        CommandBase.oi.call();
     }
     
     /**
@@ -66,6 +61,6 @@ public class RobotTemplate extends IterativeRobot {
      */
     public void testPeriodic() 
     {
-        LiveWindow.run();
+        //LiveWindow.run();
     }
 }
